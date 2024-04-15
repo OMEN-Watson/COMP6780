@@ -132,6 +132,7 @@ img {
 
 .cta-primary,
 .cta-secondary {
+
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
@@ -143,12 +144,14 @@ img {
 .cta-primary {
   background-color: #007bff;
   color: white;
+  font-weight: bold;
 }
 
 .cta-secondary {
   background-color: #ffcc00;
   /* Gold for less urgency */
   color: black;
+  font-weight: bold;
 }
 
 .cta-primary:hover {
@@ -158,4 +161,80 @@ img {
 .cta-secondary:hover {
   background-color: #dda20a;
   /* Darker gold on hover */
+}
+
+/* slideShow */
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+} */
+
+.mySlides {
+  display: none
+}
+
+.mySlides:first-child {
+  display: block;
+}
+
+.mySlides img {
+  vertical-align: middle;
+  height: 90vh;
+  width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 100px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
