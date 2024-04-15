@@ -1,0 +1,23 @@
+p {
+  color: blue;
+}
+
+h1 {
+  color: yellow;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+img {
+  filter: grayscale(10%);
+}
+
+table,
+th,
+td {
+  background-color: lightgreen;
+  border: 1px solid darkblue;
+
+}
