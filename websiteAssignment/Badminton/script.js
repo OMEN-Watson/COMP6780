@@ -1,5 +1,6 @@
 //for navigation 
 document.addEventListener('DOMContentLoaded', function () {
+
   const links = document.querySelectorAll('#navLinks a');
 
   links.forEach(function (link) {

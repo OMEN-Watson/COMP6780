@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Players and Legends</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    #slideshow-container {
+      width: 600px;
+      /* Set the width of the slideshow container */
+      height: 400px;
+      /* Set the height of the slideshow container */
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    #slideshow-container img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: none;
+      /* Hide images by default */
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 100;
+    }
+
+    #prev {
+      left: 10px;
+    }
+
+    #next {
+      right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Placeholder for the slideshow -->
+  <div id="slideshow-container"></div>
+
+  <!-- Navigation Buttons -->
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
+  <script>
+    console.log('this is js')
+    prompt('dede')
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+      var images = ["images/LinDan.png", "images/LinDan.png", "images/LinDan.png"]; // Array of image sources
+      var currentIndex = 0;
+
+      var slideshowContainer = document.getElementById("slideshow-container");
+
+      // Create and append image elements to the container
+      images.forEach((src, index) => {
+        var img = document.createElement("img");
+        img.src = src;
+        img.style.display = index === 0 ? "block" : "none"; // Display only the first image initially
+        slideshowContainer.appendChild(img);
+      });
+
+      var slides = slideshowContainer.getElementsByTagName("img");
+
+      // Function to update slide visibility
+      function showSlide(index) {
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[index].style.display = "block";
+      }
+
+      // Navigation handlers
+      document.getElementById("prev").addEventListener("click", function () {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
+        showSlide(currentIndex);
+      });
+
+      document.getElementById("next").addEventListener("click", function () {
+        currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+        showSlide(currentIndex);
+      });
+    });
+
+  </script>
+  <!-- <section id="passion-content">
+
+
+    <h2>Photo Gallery</h2>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="mySlides-row">
+
+          <div class="mySlides-cell">
+            <img src="images/LinDan.png">
+          </div>
+          <div class="mySlides-cell">
+            <h1>Lin Dan</h1>
+            <p>Lin Dan, born on October 14, 1983, in Longyan, Fujian, China, is one of the greatest badminton players in
+              history. Often referred to by his nickname "Super Dan," he is celebrated for his exceptional agility,
+              powerful smashes, and tactical genius. Lin Dan completed the "Super Grand Slam" by the age of 28, having
+              won all nine major titles in international badminton — Olympic Games, World Championships, World Cup,
+              Thomas Cup, Sudirman Cup, Super Series Masters Finals, All England Open, Asian Games, and Asian
+              Championships. He is a two-time Olympic gold medalist, winning in 2008 and 2012, and a five-time World
+              Champion. Lin Dan's rivalry with Malaysian player Lee Chong Wei has been particularly famed, contributing
+              to the global popularity of badminton.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="mySlides fade">
+      <h1>Taufik Hidayat</h1>
+
+      <img src="images/Taufik.png">
+    </div>
+    <div class="mySlides fade">
+      <img src="images/Lee_Chong_Wei.png">
+    </div>
+    <div class="mySlides fade">
+      <img src="images/peterGade.png">
+    </div>
+
+    <!-- Next and previous buttons -->
+
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <script src="PhotoGallery.js"></script>
+  </section> -->
+</body>
+
+
+</html>
