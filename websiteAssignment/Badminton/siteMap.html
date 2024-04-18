@@ -19,59 +19,18 @@
   <div class="container">
     <ul id="navLinks">
       <li><a href="MainPage.html#passion" data-content="passion">my passion</a></li>
-      <li><a href="MainPage.html#introduction" data-content="introduction">Introduction</a></li>
       <li><a href="MainPage.html#equipment" data-content="equipment">Equipment</a></li>
       <li><a href="MainPage.html#tips" data-content="tips">Playing Tips</a></li>
       <li><a href="MainPage.html#join" data-content="join">Join Us</a></li>
       <li><a href="MainPage.html#sourceLog" data-content="sourceLog">Source Log</a></li>
       <li><a href="MainPage.html#feedbackForm" data-content="feedbackForm">Feedback Form</a></li>
       <li><a href="MainPage.html#siteMap" data-content="siteMap">Site Map</a></li>
+      <li><a href="MainPage.html#playersAndLegends" data-content="playersAndLegends">Players and Legends</a></li>
     </ul>
   </div>
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const links = document.querySelectorAll('#navLinks a');
+  <script src="scriptSubPage.js">
 
-      links.forEach(function (link) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          const contentId = this.getAttribute('data-content');
-          window.location.hash = contentId;
-          updateContent(contentId);
-        });
-      });
-      // Load content based on current hash
-      if (window.location.hash) {
-        updateContent(window.location.hash.substring(1));
-      }
-
-      // React to hash change in the URL
-      window.addEventListener('hashchange', function () {
-        updateContent(window.location.hash.substring(1));
-      }, false);
-    });
-
-    function updateContent(contentId) {
-      const content = document.getElementById('content');
-
-
-      getMyPassionPage(contentId)
-
-
-    }
-
-    function getMyPassionPage(htmlName) {
-      fetch(htmlName + '.html')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('content').innerHTML = html;
-        })
-        .catch(error => {
-          console.error('Error loading the My Passion content:', error);
-        });
-    }
-  </script> -->
+  </script>
 </body>
 
 </html>

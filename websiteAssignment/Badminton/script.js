@@ -1,5 +1,11 @@
+
+
+
 //for navigation 
 document.addEventListener('DOMContentLoaded', function () {
+  //modify the width of right page
+  var newWidth = window.innerWidth - 350;
+  document.getElementById('iframeId').style.maxWidth = newWidth + 'px';
 
   const links = document.querySelectorAll('#navLinks a');
 
@@ -30,20 +36,16 @@ function updateContent(contentId) {
   const content = document.getElementById('content');
   switch (contentId) {
 
-    // case 'passion':
-    //   getMyPassionPage(contentId)
-    //   break;
-    case 'introduction':
-      content.innerHTML = '<h2>Introduction to Badminton</h2><p>Learn about the history and rules of this exciting sport.</p>';
-      break;
+
     // case 'equipment':
     //   content.innerHTML = '<h2>Badminton Equipment</h2><p>Discover the essential gear you need to play badminton.</p>';
     //   break;
     case 'tips':
-      content.innerHTML = '<h2>Playing Tips</h2><p>Improve your game with these helpful badminton tips.</p>';
+      // content.innerHTML = '<h2>Playing Tips</h2><p>Improve your game with these helpful badminton tips.</p>';
+
       break;
     case 'join':
-      content.innerHTML = '<h2>Join Our Club</h2><p>Become a member of our badminton community and enjoy the game.</p>';
+      // content.innerHTML = '<h2>Join Our Club</h2><p>Become a member of our badminton community and enjoy the game.</p>';
       break;
     // case 'assignment':
 
@@ -51,7 +53,8 @@ function updateContent(contentId) {
 
     default:
 
-      getCustomPage(contentId)
+      // getCustomPage(contentId)
+      getCustomPageByIFrame(contentId)
       break;
     // content.innerHTML = '<h2>Welcome</h2><p>Select an option from the menu to learn more.</p>';
   }
@@ -62,12 +65,58 @@ function getCustomPage(htmlName) {
     .then(response => response.text())
     .then(html => {
       document.getElementById('content').innerHTML = html;
+
+
     })
     .catch(error => {
       console.error('Error loading the My Passion content:', error);
     });
 }
+// for get the web page with separately jsFile
+function getCustomPageByIFrame(htmlName) {
 
+  // var iframe = document.createElement('iframe'); // Create a new iframe element
+  // var iframeList = document.getElementById('myIframe')
+  var iframe = document.getElementById('iframeId')
+  // iframe.onload = function () {
+  //   // Assuming the iframe is from the same origin to allow this manipulation
+  //   var iframeHead = iframe.contentWindow.document.head;
+  //   var link = document.createElement('link');
+  //   link.rel = 'stylesheet';
+  //   link.href = 'style.css';
+  //   iframeHead.appendChild(link);
+  // };
+
+  iframe.onload = function () {
+    // Check if you can access the content of the iframe
+    try {
+      var iframeHead = iframe.contentDocument.head;  // Use contentDocument instead
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'styles.css';  // Use an absolute path for testing
+      iframeHead.appendChild(link);
+      l
+    } catch (error) {
+      console.error("Failed to inject stylesheet: ", error);
+    }
+  };
+  iframe.src = htmlName + '.html'; // URL to load in the iframe
+
+
+  var divContainer = document.getElementById('content')
+
+  // Clear all children from the container
+  while (divContainer.firstChild) {
+    divContainer.removeChild(divContainer.firstChild);
+  }
+  divContainer.appendChild(iframe);
+
+
+
+
+
+
+}
 
 // slideShow
 var slideIndex = 1;

@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equipment</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 
-<body class="equipment-body">
+<body>
   <!-- <div class="equipment-item">
     <img src="images/Arc11Racket.jpg" alt="Badminton Racket" />
     <h3>Arc 11 Racket</h3>
@@ -17,10 +17,11 @@
 
     </a>
   </div> -->
-  <h1>Equipment</h1>
+  <h2>Equipment</h2>
 
-  <br>
+
   <div class="racket-list">
+    <!-- Repeat for each racket -->
     <div class="racket-item">
       <img src="images/Arc11Racket.jpg" alt="Pro Racket 3000" class="racket-img">
       <div class="racket-content">
@@ -33,6 +34,7 @@
         <a href="#" class="cta-secondary">Get a Discount</a>
       </div>
     </div>
+
     <div class="racket-item">
       <img src="images/Arc1Pro.png" alt="Pro Racket 3000" class="racket-img">
       <div class="racket-content">
@@ -43,8 +45,18 @@
         <a href="#" class="cta-secondary">Get a Discount</a>
       </div>
     </div>
-    <!-- Repeat for each racket -->
+
   </div>
+  <script>console.log('this is equipment')
+    //make the a in "Top"
+    document.addEventListener('DOMContentLoaded', function () {
+      var links = document.querySelectorAll('a');
+      links.forEach(function (link) {
+        link.target = '_top';
+      });
+    });
+
+  </script>
 </body>
 
 </html>
