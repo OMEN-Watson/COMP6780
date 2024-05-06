@@ -35,6 +35,33 @@ document.addEventListener('DOMContentLoaded', function () {
     updateContent(window.location.hash.substring(1));
   }, false);
   getCustomPageByIFrame('passion')
+
+
+  /* #region zoom out the photo*/
+  const modal = document.querySelector('.modal');
+  const modalImage = document.getElementById('modal-image');
+  const closeButton = document.querySelector('.close-btn');
+
+  window.addEventListener('message', function (event) {
+    if (event.origin != null) {  // Adjust as needed
+      if (event.data.type === 'openModal') {
+        modalImage.src = event.data.src; // Image source sent from the iframe
+        modal.style.display = "flex"; // Open the modal
+      }
+    }
+  });
+
+  closeButton.addEventListener('click', function () {
+    modal.style.display = "none";
+  });
+  modal.style.display = "none";
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  /* #endregion */
 });
 
 
@@ -91,7 +118,7 @@ function getCustomPageByIFrame(htmlName) {
       link.rel = 'stylesheet';
       link.href = 'styles.css';  // Use an absolute path for testing
       iframeHead.appendChild(link);
-      l
+
     } catch (error) {
       console.error("Failed to inject stylesheet: ", error);
     }
@@ -133,14 +160,19 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  try {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  } catch (error) {
+
   }
-  slides[slideIndex - 1].style.display = "block";
+
 }
 
 

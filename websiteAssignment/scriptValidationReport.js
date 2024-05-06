@@ -3,11 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const images = ['images/LinDan.png', 'images/ShiYuqi.png', 'images/peterGade.png'];
   let currentIndex = 0;
 
-  const galleryImage = document.querySelector('.slideshow-container');
+  // const divContainer = document.querySelector('.slideshow-container');
+  const galleryImage = document.querySelector('.VReport-container img');
   // var slideshowContainer = document.getElementsByClassName("slideshow-container");
+  const closeButton = document.querySelector('.close-btn');
   const dotsContainer = document.querySelector('.dots-container');
+
   const prevButton = document.querySelector('.prev');
   const nextButton = document.querySelector('.next');
+
 
   // Create dots
   images.forEach((_, index) => {
@@ -34,8 +38,13 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (index >= images.length) {
       index = 0; // Wrap around to first image if index exceeds array bounds
     }
-    galleryImage.src = images[index];
+
     currentIndex = index;
+    galleryImage.classList.add('fade-out'); // Start the fade-out
+    setTimeout(() => {
+      galleryImage.src = images[currentIndex];// Change the image source
+      galleryImage.classList.remove('fade-out'); // Remove fade-out, so it fades in
+    }, 200); // This timeout duration should match the CSS transition time
     updateDots();
   }
 
@@ -49,4 +58,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  setCurrentImage(currentIndex);
+  // Example: Change image every 5 seconds (optional)
+  // setInterval(() => {
+  //   let nextIndex = (currentIndex + 1) % images.length;
+  //   setCurrentImage(nextIndex);
+  // }, 1000);
+
+  // Display the modal
+  galleryImage.addEventListener('click', function () {
+    window.parent.postMessage({
+      type: 'openModal',
+      src: this.src
+    }, "*"); // Post to the main  page domain 
+  });
+
 });
