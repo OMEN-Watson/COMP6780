@@ -338,3 +338,22 @@ a:hover {
 }
 
 /* #endregion */
+
+
+/* #region validation report*/
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.active {
+  background-color: #717171;
+  /* Darker color for the active dot */
+}
+
+
+/* #endregion */
