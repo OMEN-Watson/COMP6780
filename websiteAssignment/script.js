@@ -70,8 +70,6 @@ function updateContent(contentId) {
   switch (contentId) {
 
 
-
-
     default:
 
       // getCustomPage(contentId)
