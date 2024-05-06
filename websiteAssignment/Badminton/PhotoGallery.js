@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var images = ["images/LinDan.png", "images/LinDan.png", "images/LinDan.png"]; // Array of image sources
   var currentIndex = 0;
 
-  var slideshowContainer = document.getElementById("slideshow-container");
+  var slideshowContainer = document.getElementsByClassName("slideshow-container");
 
   // Create and append image elements to the container
   images.forEach((src, index) => {

@@ -1,9 +1,10 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
-  const images = ['images/LinDan.png', 'images/ShiYuqi.png'];
+  const images = ['images/LinDan.png', 'images/ShiYuqi.png', 'images/peterGade.png'];
   let currentIndex = 0;
 
-  const galleryImage = document.querySelector('.gallery-image');
+  const galleryImage = document.querySelector('.slideshow-container');
+  // var slideshowContainer = document.getElementsByClassName("slideshow-container");
   const dotsContainer = document.querySelector('.dots-container');
   const prevButton = document.querySelector('.prev');
   const nextButton = document.querySelector('.next');
