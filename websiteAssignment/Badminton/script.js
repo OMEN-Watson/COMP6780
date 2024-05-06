@@ -1,7 +1,8 @@
 
 
+/* #region global operation*/
 
-//for navigation 
+//for sidebar navigation 
 document.addEventListener('DOMContentLoaded', function () {
   //modify the width of right page
   var newWidth = window.innerWidth - 350;
@@ -30,26 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('hashchange', function () {
     updateContent(window.location.hash.substring(1));
   }, false);
+  getCustomPageByIFrame('passion')
 });
+
 
 function updateContent(contentId) {
   const content = document.getElementById('content');
   switch (contentId) {
 
 
-    // case 'equipment':
-    //   content.innerHTML = '<h2>Badminton Equipment</h2><p>Discover the essential gear you need to play badminton.</p>';
-    //   break;
-    case 'tips':
-      // content.innerHTML = '<h2>Playing Tips</h2><p>Improve your game with these helpful badminton tips.</p>';
 
-      break;
-    case 'join':
-      // content.innerHTML = '<h2>Join Our Club</h2><p>Become a member of our badminton community and enjoy the game.</p>';
-      break;
-    // case 'assignment':
-
-    //   break;
 
     default:
 
@@ -59,6 +50,8 @@ function updateContent(contentId) {
     // content.innerHTML = '<h2>Welcome</h2><p>Select an option from the menu to learn more.</p>';
   }
 }
+
+
 
 function getCustomPage(htmlName) {
   fetch(htmlName + '.html')
@@ -118,6 +111,15 @@ function getCustomPageByIFrame(htmlName) {
 
 }
 
+/* #endregion */
+
+
+
+/* #region photo gallery*/
+
+
+
+
 // slideShow
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -148,5 +150,5 @@ function showSlides(n) {
 //     img.src = img.getAttribute('data-src'); // Only set src after onerror is assigned
 //   });
 // });
-
+/* #endregion */
 
