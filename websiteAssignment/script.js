@@ -2,8 +2,11 @@
 
 /* #region global operation*/
 
-//for sidebar navigation 
+//for sidebar navigation, 
+// when user clicking the link 
+// it will automatically jump to the new page
 document.addEventListener('DOMContentLoaded', function () {
+  console.log('here is subPage')
   //modify the width of right page
   var newWidth = window.innerWidth - 350;
   document.getElementById('iframeId').style.maxWidth = newWidth + 'px';
