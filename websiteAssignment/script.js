@@ -1,6 +1,31 @@
 
 
 /* #region global operation 1*/
+// for the dark mode button 
+// document.getElementById('toggleNightMode').addEventListener('click', function() {
+//   document.body.classList.toggle('night-mode');
+// });
+window.onload = function() {
+  var linkElements = document.getElementsByTagName('link');
+var stylesheetLink = linkElements[0]; 
+  if (localStorage.getItem('style') === 'nightmode.css') {
+    
+stylesheetLink.setAttribute('href', 'styles.css');
+
+    // document.getElementById('styleSheet').setAttribute('href', 'styles.css');
+  }
+
+  document.getElementById('toggleNightMode').addEventListener('click', function() {
+    var currentStyle = stylesheetLink.getAttribute('href');
+    if (currentStyle === 'styles.css') {
+      stylesheetLink.setAttribute('href', 'nightmode.css');
+      localStorage.setItem('style', 'nightmode.css');
+    } else {
+      stylesheetLink.setAttribute('href', 'styles.css');
+      localStorage.setItem('style', 'styles.css');
+    }
+  });
+};
 
 //for sidebar navigation, 
 // when user clicking the link 
@@ -114,7 +139,8 @@ function getCustomPageByIFrame(htmlName) {
       var iframeHead = iframe.contentDocument.head;  // Use contentDocument instead
       var link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'styles.css';  // Use an absolute path for testing
+      // link.href = 'styles.css';  // Use an absolute path for testing
+      link.href=localStorage.getItem('style');
       iframeHead.appendChild(link);
 
     } catch (error) {

@@ -1,5 +1,21 @@
 /* #region global setting*/
 
+body.night-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.night-mode .sidebar {
+  background-color: #222;
+}
+
+body.night-mode a {
+  color: #9ab;
+}
+
+body.night-mode .main-content {
+  background-color: #424242;
+}
 
 
 /* #endregion */
@@ -100,7 +116,7 @@ img {
 
 /* .main-content h2 { */
 h2 {
-  color: #008a00;
+  color: yellow;
 
   text-align: center;
 }
