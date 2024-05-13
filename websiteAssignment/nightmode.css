@@ -193,11 +193,14 @@ a:hover {
   text-decoration: none;
   padding: 10px;
   display: block;
+
 }
 
 .sidebar ul li a:hover {
   background-color: #555;
 }
+
+
 
 /* Main content */
 .main-content {

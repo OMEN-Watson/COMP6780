@@ -186,6 +186,65 @@ textarea {
 
 /* #endregion */
 
+
+/* #region Join Us calendar*/
+
+#scheduleTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+#scheduleTable th,
+#scheduleTable td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+#scheduleTable th {
+  background-color: #007bff;
+  color: white;
+}
+
+#scheduleTable td {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  /* Smooth transition for background color */
+}
+
+/* Add to your existing CSS */
+#scheduleTable td.selected {
+  background-color: #66bb6a;
+  /* Green to indicate selection */
+}
+
+#scheduleTable .available {
+  background-color: #dff0d8;
+  /* Light green for available slots */
+}
+
+#scheduleTable .unavailable {
+  background-color: #f2dede;
+  /* Light red for unavailable slots */
+}
+
+#scheduleTable td:hover {
+  background-color: #cccccc;
+  /* Change background color on hover */
+}
+
+#scheduleTable .available:hover {
+  background-color: #c3e6cb;
+  /* A lighter green on hover for available slots */
+}
+
+#scheduleTable .unavailable:hover {
+  background-color: #f8d7da;
+  /* A lighter red on hover for unavailable slots */
+}
+
+/* #endregion */
 /* the big box in Main Page */
 .container {
   display: flex;
