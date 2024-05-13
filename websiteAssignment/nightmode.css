@@ -19,6 +19,138 @@ img {
   display: block;
 }
 
+/* #region switch mode button*/
+
+/* nightmode.css - Dark Style CSS for Night Mode */
+
+#toggleNightMode {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  /* Make the text bold */
+  text-shadow: 1px 1px 2px #000;
+  /* Text shadow for better readability */
+  color: #4caf50;
+  /* Bright green color for text */
+  background-color: #333;
+  /* Dark grey background */
+  border: 2px solid #444;
+  /* Slightly lighter border for subtle definition */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#toggleNightMode:hover {
+  background-color: #222;
+  /* Even darker on hover for interaction feedback */
+  color: #388e3c;
+  /* Darker green to maintain visibility */
+}
+
+#toggleNightMode:focus {
+  outline: none;
+  /* Remove default focus outline */
+  box-shadow: 0 0 0 2px #bbb;
+  /* Custom focus style in light grey */
+}
+
+
+
+
+/* #endregion */
+
+
+/* #region feedback form*/
+
+h1 {
+  color: #ccc;
+  text-align: center;
+}
+
+p {
+  color: #ccc;
+
+  text-align: center;
+
+}
+
+form {
+  background: #333;
+  /* Darker background for form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+label {
+  color: #bbb;
+  /* Light gray text for labels */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #555;
+  /* Darker border for inputs */
+  background-color: #222;
+  /* Dark input backgrounds */
+  color: #ddd;
+  /* Light text for input */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #007bff;
+  /* Blue background for the submit button */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 49%;
+  display: inline-block;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  /* Red background for the reset button */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  opacity: 0.8;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  width: auto;
+  /* Default width for better alignment */
+}
+
+.checkbox-container {
+  color: #ccc;
+  /* Light gray text for checkbox label */
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* #endregion */
 a {
   color: #bb86fc;
   /* Light purple link color for better visibility */

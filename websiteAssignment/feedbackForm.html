@@ -6,117 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback Form</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    label,
-    input,
-    textarea {
+    /* img {
       display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    input[type=text],
-    textarea {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    input[type=submit],
-    input[type=reset] {
-      cursor: pointer;
-      border: none;
-      color: white;
-      background-color: #007bff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    input[type=reset] {
-      background-color: #f44336;
-    }
-
-    input[type=submit]:hover,
-    input[type=reset]:hover {
-      opacity: 0.9;
-    }
-
-    input[type=radio] {
-      margin: 0;
-      margin-right: 5px;
-    }
-
-    input[type="checkbox"] {
-      width: auto;
-      /* Prevents the checkbox from taking the full width */
-    }
-
-    .checkbox-container {
-
-      display: flex;
-      align-items: center;
-      /* Aligns items vertically in the center */
-    }
-
-
-    textarea {
-      resize: vertical;
-    }
+      margin: 10px auto;
+      width: 100px;
+      height: auto;
+    } */
   </style>
 </head>
 
 <body>
-
   <h1>Feedback Form</h1>
-  <img src="images/survey-2316468_640.png" alt="feedback form">
-  <p>This is a Feedback Form</p>
+  <img src="images/survey-2316468_640.png" alt="Feedback Form Image">
+  <p>Please fill out the form below to leave your feedback.</p>
   <form action="mailto:13@anu.edu.au" method="post">
-    <label for="fNameId">First Name:</label><br>
-    <input type="text" id="fNameId" name="firstName"><br>
+    <label for="fNameId">First Name:</label>
+    <input type="text" id="fNameId" name="firstName">
 
-    <label for="lNameId">Last Name:</label><br>
-    <input type="text" id="lNameId" name="lastName"><br>
+    <label for="lNameId">Last Name:</label>
+    <input type="text" id="lNameId" name="lastName">
 
-    <label for="emailId">Email Address:</label><br>
-    <input type="email" id="emailId" name="email"><br>
+    <label for="emailId">Email Address:</label>
+    <input type="email" id="emailId" name="email">
 
-    <label for="feedbackType">Type of Feedback:</label><br>
-    <select name="feedbackType" id="feedbackType">
+    <label for="feedbackType">Type of Feedback:</label>
+    <select id="feedbackType" name="feedbackType">
       <option value="general">General Feedback</option>
       <option value="suggestion">Suggestion</option>
       <option value="problem">Report a Problem</option>
-    </select><br>
+    </select>
 
-    <label for="feedbackText">Please fill in your feedback:</label><br>
-    <textarea id="feedbackText" name="feedbackText" cols="30" rows="10"></textarea><br>
+    <label for="feedbackText">Your Feedback:</label>
+    <textarea id="feedbackText" name="feedbackText" rows="4"></textarea>
 
     <div class="checkbox-container">
       <input type="checkbox" id="newsletter" name="newsletter">
       <label for="newsletter">Subscribe to our newsletter</label>
     </div>
 
-
-    <input type="submit" value="Send It"><br><br>
+    <input type="submit" value="Send Feedback">
     <input type="reset" value="Reset">
   </form>
 </body>

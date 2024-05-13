@@ -98,9 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function updateContent(contentId) {
-  const content = document.getElementById('content');
-  //store the webpage info in memeory
-  localStorage.setItem('content', contentId);
+  // const content = document.getElementById('content');
+
   switch (contentId) {
 
 
@@ -117,7 +116,8 @@ function updateContent(contentId) {
 
 // for get the web page with separately jsFile
 function getCustomPageByIFrame(htmlName) {
-
+  //store the webpage info in memeory
+  localStorage.setItem('content', htmlName);
   // var iframe = document.createElement('iframe'); // Create a new iframe element
   // var iframeList = document.getElementById('myIframe')
   var iframe = document.getElementById('iframeId')

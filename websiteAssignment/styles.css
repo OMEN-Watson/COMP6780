@@ -23,8 +23,121 @@ img {
   /* Ensures the margin is applied correctly */
 }
 
+p {
+  text-align: center;
+}
+
+
+/* #region  feedback form*/
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 49%;
+  display: inline-block;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  opacity: 0.8;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-container {
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
 /* #endregion */
 
+/* #endregion */
+
+
+/* #region switch mode button*/
+
+/* daymode.css - Bright Style CSS for Day Mode */
+
+#toggleNightMode {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  /* Make the text bold */
+  text-shadow: 1px 1px 2px #666;
+  /* Text shadow for better readability */
+  color: #0056b3;
+  /* Bright blue color for text */
+  background-color: #f0f0f0;
+  /* Light grey background */
+  border: 2px solid #ccc;
+  /* Slightly darker border for definition */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#toggleNightMode:hover {
+  background-color: #e0e0e0;
+  /* Slightly darker on hover for interaction feedback */
+  color: #003c6f;
+}
+
+#toggleNightMode:focus {
+  outline: none;
+  /* Remove default focus outline */
+  box-shadow: 0 0 0 2px #555;
+  /* Custom focus style */
+}
+
+
+
+/* #endregion */
 
 /* the big box in Main Page */
 .container {
