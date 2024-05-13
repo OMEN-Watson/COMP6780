@@ -1,25 +1,4 @@
-/* #region global setting*/
-
-body.night-mode {
-  background-color: #333;
-  color: #f0f0f0;
-}
-
-body.night-mode .sidebar {
-  background-color: #222;
-}
-
-body.night-mode a {
-  color: #9ab;
-}
-
-body.night-mode .main-content {
-  background-color: #424242;
-}
-
-
-/* #endregion */
-
+/* Global settings */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -27,30 +6,38 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #121212;
+  /* Dark background for the body */
+  color: #e0e0e0;
+  /* Light text for readability */
 }
 
 img {
   width: 10%;
-  /* Adjust the width as needed */
   height: auto;
-  /* Maintain aspect ratio */
   margin: 0 auto;
-  /* Center the image horizontally */
   display: block;
-  /* Ensures the margin is applied correctly */
 }
 
-/* #endregion */
+a {
+  color: #bb86fc;
+  /* Light purple link color for better visibility */
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: underline;
+  color: #ff79c6;
+  /* Light pink color for hover state */
+}
 
-/* the big box in Main Page */
+/* Container */
 .container {
   display: flex;
   width: 100%;
 }
 
-/* #region navigation bar */
-
+/* Sidebar navigation */
 .sidebar {
   background-color: #333;
   color: white;
@@ -61,7 +48,6 @@ img {
 }
 
 .sidebar h1 {
-  color: #fff;
   font-size: 24px;
 }
 
@@ -81,43 +67,26 @@ img {
   background-color: #555;
 }
 
-/* #endregion */
-
-
-/* #region the main part in the right side*/
-
-
-
+/* Main content */
 .main-content {
-
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
-  background: #f4f4f4;
-  /* width: calc(100%-400px); */
+  background: #212121;
+  /* Darker background for main content area */
   box-sizing: border-box;
-}
-
-.main-content {
-  font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
 
 .main-content p {
   font-size: 16px;
-  line-height: 1.6;
-  color: #666;
+  color: #e0e0e0;
+  /* Light grey text for paragraphs */
 }
 
 .main-content h2 {
-  margin-top: 10;
-  /* color: blue; */
-}
-
-/* .main-content h2 { */
-h2 {
-  color: yellow;
-
+  color: #03dac6;
+  /* Cyan color for headings */
   text-align: center;
 }
 
@@ -125,37 +94,87 @@ h2 {
   width: 100%;
   height: 100%;
   position: absolute;
-  /* Makes iframe cover the entire area of the div */
   border: 0;
 }
 
-/* #endregion */
-
-
-
-/* #region the myPassion Page (for the website introduction)*/
-
-
+/* Passion section */
 .passion-section {
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #f9f9f9;
-  border-left: 5px solid #008a00;
+  background-color: #333;
+  /* Dark background for sections */
+  border-left: 5px solid #bb86fc;
+  /* Purple border */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .passion-section h3 {
   margin-top: 0;
-  color: #333;
+  color: #e0e0e0;
+  /* Light text color */
 }
 
-/* #endregion */
+/* Equipment page */
+.racket-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
+.racket-item {
+  background-color: #424242;
+  /* Dark grey background for items */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+}
 
-/* #region source log*/
+.racket-img {
+  width: 100%;
+  display: block;
+}
 
+.racket-content {
+  padding: 20px;
+  text-align: center;
+}
 
+/* Call to actions */
+.cta-primary,
+.cta-secondary {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: bold;
+}
 
+.cta-primary {
+  background-color: #6200ee;
+  /* Deep purple background for primary button */
+  color: white;
+}
+
+.cta-secondary {
+  background-color: #03dac5;
+  /* Teal background for secondary button */
+  color: black;
+}
+
+.cta-primary:hover {
+  background-color: #3700b3;
+  /* Darker purple on hover */
+}
+
+.cta-secondary:hover {
+  background-color: #018786;
+  /* Darker teal on hover */
+}
+
+/* Source log table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -170,310 +189,12 @@ td {
 }
 
 th {
-  background-color: #04AA6D;
+  background-color: #6200ee;
+  /* Deep purple for table headers */
   color: white;
 }
 
 tr:hover {
-  background-color: #f5f5f5;
+  background-color: #424242;
+  /* Dark grey for row hover */
 }
-
-a {
-  color: #04AA6D;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* #endregion */
-
-
-/* #region equipment page*/
-
-
-/* the list including all items(rackets) */
-
-.racket-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* the solely style for racket */
-.racket-item {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  overflow: hidden;
-}
-
-/* the racket image  */
-.racket-img {
-  width: 100%;
-  display: block;
-}
-
-/* the description of racket */
-.racket-content {
-  padding: 20px;
-  text-align: center;
-}
-
-
-
-/* call to actions */
-.cta-primary,
-.cta-secondary {
-
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  width: fit-content;
-}
-
-.cta-primary {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-}
-
-.cta-secondary {
-  background-color: #ffcc00;
-  /* Gold for less urgency */
-  color: black;
-  font-weight: bold;
-}
-
-.cta-primary:hover {
-  background-color: #0056b3;
-}
-
-.cta-secondary:hover {
-  background-color: #dda20a;
-  /* Darker gold on hover */
-}
-
-/* #endregion */
-
-
-/* #region gallery (players and legends) */
-
-
-/* slideShow */
-* {
-  box-sizing: border-box;
-}
-
-
-
-.mySlides {
-  display: none;
-  /* display: table; */
-  align-items: center;
-  /* justify-content: space-between; */
-}
-
-.mySlides:last-child {
-  display: block;
-}
-
-/* one row contains img and a description */
-.mySlides-row {
-  display: table-row;
-}
-
-.mySlides-cell {
-  display: table-cell;
-  vertical-align: top;
-  padding: 10px
-}
-
-.mySlides img {
-  vertical-align: middle;
-  height: 90vh;
-  width: 30vw;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: green;
-  font-weight: bold;
-  font-size: 100px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 10vw;
-  border-radius: 3px 0 0 3px;
-  text-decoration: none;
-}
-
-.prev {
-  left: 10vw;
-  border-radius: 3px 0 0 3px;
-  text-decoration: none;
-  /* Removes underline */
-}
-
-/* Hover effect */
-.prev:hover,
-.next:hover {
-  background-color: #555;
-  /* Darker background on hover */
-  color: white;
-  /* White text to stand out */
-  transform: scale(1.1);
-  /* Slightly enlarge the buttons */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  /* Soft shadow for depth */
-  text-decoration: none;
-  /* Reiterate removal of underline if needed */
-}
-
-.prev:active,
-.next:active {
-  transform: scale(0.85);
-  /* Slightly shrink the button when clicked */
-  box-shadow: none;
-  /* Optionally remove the shadow when clicked */
-}
-
-.prev:focus,
-.next:focus {
-  outline: 2px solid #555;
-  /* Add an outline when focused */
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-/* #endregion */
-
-
-/* #region validation report page*/
-
-/* Fading animation */
-
-
-.VReport-container img {
-  vertical-align: middle;
-  height: 80vh;
-  width: 30vw;
-  /* transition: transform 0.3s ease; */
-
-  transition: opacity 0.2s ease-in-out;
-  /* Smooth transition for the opacity */
-}
-
-.VReport-container img.fade-out {
-  opacity: 0;
-}
-
-/* // Slightly enlarge the image on hover */
-.VReport-container img:hover {
-  transform: scale(1.1);
-
-}
-
-
-
-/* Navigation dots container */
-.dots-container {
-  position: absolute;
-  bottom: 50px;
-  /* Adjust based on your design preference */
-  width: 100%;
-  text-align: center;
-}
-
-.dot {
-  height: 20px;
-  width: 20px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.active {
-  background-color: #717171;
-  /* Darker color for the active dot */
-}
-
-.close-btn {
-  position: absolute;
-  top: 100px;
-  right: 100px;
-  font-size: 100px;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  /* // Make sure it's higher than anything else. */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  width: 90%;
-  /* // Use 90% of the container's width */
-  height: 100vh;
-  /* // Use 80% of the viewport height */
-  object-fit: contain;
-  /* // Maintain the aspect ratio */
-  border: none;
-  /* // Remove any border */
-}
-
-/* #endregion */

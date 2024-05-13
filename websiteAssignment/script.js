@@ -5,28 +5,35 @@
 // document.getElementById('toggleNightMode').addEventListener('click', function() {
 //   document.body.classList.toggle('night-mode');
 // });
-window.onload = function() {
+window.onload = function () {
   var linkElements = document.getElementsByTagName('link');
-var stylesheetLink = linkElements[0]; 
+  var stylesheetLink = linkElements[0];
   if (localStorage.getItem('style') === 'nightmode.css') {
-    
-stylesheetLink.setAttribute('href', 'styles.css');
+
+    stylesheetLink.setAttribute('href', 'styles.css');
 
     // document.getElementById('styleSheet').setAttribute('href', 'styles.css');
   }
 
-  document.getElementById('toggleNightMode').addEventListener('click', function() {
-    var currentStyle = stylesheetLink.getAttribute('href');
-    if (currentStyle === 'styles.css') {
-      stylesheetLink.setAttribute('href', 'nightmode.css');
-      localStorage.setItem('style', 'nightmode.css');
-    } else {
-      stylesheetLink.setAttribute('href', 'styles.css');
-      localStorage.setItem('style', 'styles.css');
-    }
-  });
-};
 
+};
+//night mode button
+document.getElementById('toggleNightMode').addEventListener('click', function () {
+  var linkElements = document.getElementsByTagName('link');
+  var stylesheetLink = linkElements[0];
+  var currentStyle = stylesheetLink.getAttribute('href');
+  if (currentStyle === 'styles.css') {
+    stylesheetLink.setAttribute('href', 'nightmode.css');
+    localStorage.setItem('style', 'nightmode.css');
+  } else {
+    stylesheetLink.setAttribute('href', 'styles.css');
+    localStorage.setItem('style', 'styles.css');
+  }
+  contentId = localStorage.getItem('content');
+  window.location.hash = contentId;
+  updateContent(contentId)
+
+});
 //for sidebar navigation, 
 // when user clicking the link 
 // it will automatically jump to the new page
@@ -92,12 +99,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function updateContent(contentId) {
   const content = document.getElementById('content');
+  //store the webpage info in memeory
+  localStorage.setItem('content', contentId);
   switch (contentId) {
 
 
     default:
 
-      // getCustomPage(contentId)
+
       getCustomPageByIFrame(contentId)
       break;
     // content.innerHTML = '<h2>Welcome</h2><p>Select an option from the menu to learn more.</p>';
@@ -106,32 +115,13 @@ function updateContent(contentId) {
 
 
 
-function getCustomPage(htmlName) {
-  fetch(htmlName + '.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('content').innerHTML = html;
-
-
-    })
-    .catch(error => {
-      console.error('Error loading the My Passion content:', error);
-    });
-}
 // for get the web page with separately jsFile
 function getCustomPageByIFrame(htmlName) {
 
   // var iframe = document.createElement('iframe'); // Create a new iframe element
   // var iframeList = document.getElementById('myIframe')
   var iframe = document.getElementById('iframeId')
-  // iframe.onload = function () {
-  //   // Assuming the iframe is from the same origin to allow this manipulation
-  //   var iframeHead = iframe.contentWindow.document.head;
-  //   var link = document.createElement('link');
-  //   link.rel = 'stylesheet';
-  //   link.href = 'style.css';
-  //   iframeHead.appendChild(link);
-  // };
+
 
   iframe.onload = function () {
     // Check if you can access the content of the iframe
@@ -140,7 +130,7 @@ function getCustomPageByIFrame(htmlName) {
       var link = document.createElement('link');
       link.rel = 'stylesheet';
       // link.href = 'styles.css';  // Use an absolute path for testing
-      link.href=localStorage.getItem('style');
+      link.href = localStorage.getItem('style');
       iframeHead.appendChild(link);
 
     } catch (error) {
@@ -200,14 +190,5 @@ function showSlides(n) {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   var slides = document.querySelectorAll('.mySlides img');
-//   slides.forEach(function (img) {
-//     img.onerror = function () {
-//       this.src = 'LinDan.png'; // Fallback image
-//     };
-//     img.src = img.getAttribute('data-src'); // Only set src after onerror is assigned
-//   });
-// });
-/* #endregion */
+
 
