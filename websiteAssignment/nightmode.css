@@ -229,6 +229,12 @@ a:hover {
   border: 0;
 }
 
+h2 {
+  color: #008a00;
+
+  text-align: center;
+}
+
 /* Passion section */
 .passion-section {
   margin-bottom: 20px;

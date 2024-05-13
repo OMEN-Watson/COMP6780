@@ -28,6 +28,23 @@ p {
 }
 
 
+/* #region social networking */
+
+.crt-logo {
+  text-decoration: none;
+  color: #fff;
+  background: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.crt-logo:hover {
+  background-color: #555;
+}
+
+
+/* #endregion */
 /* #region  feedback form*/
 h1 {
   color: #333;
@@ -139,10 +156,50 @@ textarea {
 
 /* #endregion */
 
+
+/* #region links*/
+
+#navLinksSiteMap {
+  list-style: none;
+  /* Removes bullet points */
+  padding: 0;
+  /* Removes default padding */
+}
+
+#navLinksSiteMap li {
+  display: list-item;
+  /* Makes list items appear in a row */
+  margin-right: 10px;
+  /* Spacing between items */
+}
+
+#navLinksSiteMap a {
+  text-decoration: none;
+  color: #007bff;
+  /* Example link color */
+}
+
+#navLinksSiteMap a:hover {
+  text-decoration: underline;
+}
+
+
+/* #endregion */
+
 /* the big box in Main Page */
 .container {
   display: flex;
   width: 100%;
+  /* text-align: center; */
+  /* Centers the list */
+
+}
+
+.sub-container {
+  width: 100%;
+  /* Full width to align the list properly */
+  text-align: left;
+  /* Centers the list */
 }
 
 /* #region navigation bar */
