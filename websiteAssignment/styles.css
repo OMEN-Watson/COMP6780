@@ -44,6 +44,10 @@ p {
 }
 
 
+
+
+
+
 /* #endregion */
 /* #region  feedback form*/
 h1 {
@@ -202,6 +206,14 @@ textarea {
   text-align: center;
 }
 
+#scheduleTable th:first-child,
+#scheduleTable td:first-child {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #scheduleTable th {
   background-color: #007bff;
   color: white;
@@ -229,9 +241,10 @@ textarea {
   /* Light red for unavailable slots */
 }
 
+/* Change background color on hover */
 #scheduleTable td:hover {
   background-color: #cccccc;
-  /* Change background color on hover */
+
 }
 
 #scheduleTable .available:hover {
@@ -244,7 +257,18 @@ textarea {
   /* A lighter red on hover for unavailable slots */
 }
 
+/* Light yellow background for hover effect */
+
+#scheduleTable .hover-effect {
+  border-width: 2px;
+  border-color: blue;
+  /* background-color: #007bff; */
+  /* color: blue; */
+}
+
 /* #endregion */
+
+
 /* the big box in Main Page */
 .container {
   display: flex;

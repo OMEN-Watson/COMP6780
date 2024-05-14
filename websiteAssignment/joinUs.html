@@ -19,25 +19,46 @@
 
   <table id="scheduleTable">
     <thead>
+      <tr id="dateRow">
+        <th></th> <!-- First cell is empty for the time label -->
+        <th id="dateMonday"></th>
+        <th id="dateTuesday"></th>
+        <th id="dateWednesday"></th>
+        <th id="dateThursday"></th>
+        <th id="dateFriday"></th>
+        <th id="dateSaturday"></th>
+        <th id="dateSunday"></th>
+      </tr>
       <tr>
         <th>Time / Day</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-        <th>Saturday</th>
-        <th>Sunday</th>
+        <th id="monday">Monday</th>
+        <th id="tuesday">Tuesday</th>
+        <th id="wednesday">Wednesday</th>
+        <th id="thursday">Thursday</th>
+        <th id="friday">Friday</th>
+        <th id="saturday">Saturday</th>
+        <th id="sunday">Sunday</th>
       </tr>
-    </thead>
     <tbody>
+      <!-- Time slots will be dynamically filled in -->
+    </tbody>
+    <tfoot>
+      <tr>
+
+        <td colspan="8" id="selectionInfo">No time slots selected.</td>
+      </tr>
+    </tfoot>
+
+    </thead>
+
+    <!-- <tbody>
       <tr>
         <td>8:00 - 8:30 AM</td>
         <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
         <td class="available"></td>
       </tr>
@@ -46,112 +67,112 @@
         <td class="available"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
       </tr>
       <tr>
         <td>9:00 - 9:30 AM</td>
-        <td class="unavailable"></td>
-        <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
       </tr>
       <tr>
         <td>9:30 - 10:00 AM</td>
         <td class="available"></td>
-        <td class="unavailable"></td>
-        <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
       </tr>
       <tr>
         <td>10:00 - 10:30 AM</td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
       </tr>
       <tr>
         <td>10:30 - 11:00 AM</td>
         <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
         <td class="available"></td>
       </tr>
       <tr>
         <td>11:00 - 11:30 AM</td>
-        <td class="unavailable"></td>
-        <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
       </tr>
       <tr>
         <td>11:30 - 12:00 PM</td>
         <td class="available"></td>
-        <td class="unavailable"></td>
-        <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
       </tr>
       <tr>
         <td>12:00 - 12:30 PM</td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
       </tr>
       <tr>
         <td>12:30 - 1:00 PM</td>
         <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
         <td class="available"></td>
       </tr>
       <tr>
         <td>1:00 - 1:30 PM</td>
-        <td class="unavailable"></td>
-        <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
         <td class="available"></td>
       </tr>
       <tr>
         <td>1:30 - 2:00 PM</td>
         <td class="available"></td>
-        <td class="unavailable"></td>
-        <td class="available"></td>
-        <td class="unavailable"></td>
         <td class="available"></td>
         <td class="available"></td>
-        <td class="unavailable"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
+        <td class="available"></td>
       </tr>
-    </tbody>
+    </tbody> -->
   </table>
   <script src="joinUs.js"></script>
 </body>
