@@ -170,6 +170,9 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
+  if (isNaN(slideIndex)) {
+    slideIndex = 1
+  }
   showSlides(slideIndex += n);
 }
 
