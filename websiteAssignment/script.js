@@ -38,7 +38,6 @@ document.getElementById('toggleNightMode').addEventListener('click', function ()
 // when user clicking the link 
 // it will automatically jump to the new page
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('here is subPage')
   //modify the width of right page
   var newWidth = window.innerWidth - 350;
   document.getElementById('iframeId').style.maxWidth = newWidth + 'px';
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('hashchange', function () {
     updateContent(window.location.hash.substring(1));
   }, false);
-  getCustomPageByIFrame('passion')
+  // getCustomPageByIFrame('passion')
 
 
   /* #region zoom out the photo*/

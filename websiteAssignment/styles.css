@@ -44,6 +44,16 @@ p {
 }
 
 
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Adds 20px gap between each item */
+}
+
 
 
 
