@@ -2,9 +2,7 @@
 
 /* #region global operation 1*/
 // for the dark mode button 
-// document.getElementById('toggleNightMode').addEventListener('click', function() {
-//   document.body.classList.toggle('night-mode');
-// });
+
 window.onload = function () {
   var linkElements = document.getElementsByTagName('link');
   var stylesheetLink = linkElements[0];

@@ -1,12 +1,12 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
-  const images = ['images/validationequipment.png',
-    'images/validationfeedbackform.png',
-    'images/validationpassion.png',
-    'images/validationplayersandlegends.png',
-    'images/validationsitemap.png',
-    'images/validationsocialnetwork.png',
-    'images/validationsourcelog.png'];
+  const images = ['images/validationEquipment.png',
+    'images/validationFeedbackform.png',
+    'images/validationPassion.png',
+    'images/validationPlayersAndLegends.png',
+    'images/validationSiteMap.png',
+    'images/validationSocialnetwork.png',
+    'images/validationSourcelog.png'];
   let currentIndex = 0;
 
   // const divContainer = document.querySelector('.slideshow-container');
