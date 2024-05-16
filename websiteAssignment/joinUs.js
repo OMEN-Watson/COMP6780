@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let isSelecting = false;
   let startRow = null;
   let startColumn = null;
-  // let isDragging = false;
+
   // const table = document.getElementById('scheduleTable');
 
   //click
@@ -188,44 +188,6 @@ function removeHoverEffect(targetCell) {
     cell.classList.remove('hover-effect');
   });
 }
-//make the selected cells green
-// function setTheCellFunction() {
-//   let isSelecting = false;
-//   let startRow = null;
-//   let startColumn = null;
-
-//   const table = document.getElementById('scheduleTable');
-//   const cells = table.getElementsByTagName('td');
-
-//   // #region old cell function
-//   for (const cell of cells) {
-//     // Start selection on mousedown
-//     cell.addEventListener('mousedown', function (event) {
-//       isDragging = true;
-//       toggleCellSelected(event.target);
-//       event.preventDefault(); // Prevent text selection
-//     });
-
-//     // Continue selection if dragging over
-//     cell.addEventListener('mouseenter', function (event) {
-//       if (isDragging) {
-//         toggleCellSelected(event.target);
-//       }
-//     });
-
-
-//   }
-
-//   // End selection on mouseup
-//   document.addEventListener('mouseup', function () {
-//     isDragging = false;
-//     simulateClickOutsideTable()
-//   });
-//   // #endregion
-
-
-
-// }
 
 function toggleCellSelected(cell) {
   // Toggle the 'selected' class

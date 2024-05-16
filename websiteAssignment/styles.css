@@ -675,8 +675,10 @@ a:hover {
 }
 
 
+/* #region Navigation dots container for validation report*/
 
-/* Navigation dots container */
+
+
 .dots-container {
   position: absolute;
   bottom: 50px;
@@ -734,5 +736,7 @@ a:hover {
   border: none;
   /* // Remove any border */
 }
+
+/* #endregion */
 
 /* #endregion */

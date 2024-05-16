@@ -1,6 +1,12 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
-  const images = ['images/LinDan.png', 'images/ShiYuqi.png', 'images/peterGade.png'];
+  const images = ['images/validationequipment.png',
+    'images/validationfeedbackform.png',
+    'images/validationpassion.png',
+    'images/validationplayersandlegends.png',
+    'images/validationsitemap.png',
+    'images/validationsocialnetwork.png',
+    'images/validationsourcelog.png'];
   let currentIndex = 0;
 
   // const divContainer = document.querySelector('.slideshow-container');
@@ -43,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     galleryImage.classList.add('fade-out'); // Start the fade-out
     setTimeout(() => {
       galleryImage.src = images[currentIndex];// Change the image source
+      galleryImage.alt = images[currentIndex]
       galleryImage.classList.remove('fade-out'); // Remove fade-out, so it fades in
     }, 200); // This timeout duration should match the CSS transition time
     updateDots();
